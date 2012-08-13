@@ -44,7 +44,7 @@ def fixPage(page):
         content = pyPdf113.pdf.ContentStream(content, page.pdf)
     
     newContentOperations = []
-    i = 0
+
     for i, op in enumerate(content.operations):
         if (i <= 38 and i >= 5 and REMOVE_SQUIGGLES  
            and content.operations[i-1][1]=='q'
